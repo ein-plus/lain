@@ -133,7 +133,7 @@ class ClusterPlugin(Plugin):
         try:
             resp = requests.get(
                 "http://docker.lain:2375/info",
-                timeout=1)
+                timeout=3)
             data = resp.json()
             driver_status = data["DriverStatus"]
             data_used = 0
